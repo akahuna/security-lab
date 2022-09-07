@@ -10,8 +10,9 @@
 # Usage: ansible-playbook fsl-packages.yml -f 10
 
 ---
-- hosts: fsl_hosts
-  user: root
+#- hosts: fsl_hosts
+- hosts: all 
+  become: true
   tasks:
   - name: install all packages from the FSL
     dnf: pkg={{ item }}
@@ -63,6 +64,8 @@
        - fping
        - goaccess
        - gparted
+       - gnome-tweaks
+       - gnome-*
        - halberd
        - hans
        - hexedit
@@ -217,7 +220,7 @@
        - whois
        - wipe
        - wireshark
-       - wireshark-gtk
+       #- wireshark-gtk
        - xmount
        - yersinia
        - yum-utils

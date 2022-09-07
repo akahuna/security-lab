@@ -22,6 +22,10 @@ For local installations:
 
 $ sudo ansible-playbook [Name of the playbook].yml --connection=local
 
+For remote:
+
+$ ansible-playbook -i akahuna@192.168.26.xxx, --private-key '/Users/a/ansible/ssh/id' -u akahuna ansible-playbooks/fsl-packages.yml
+
 Maintainer
 ----------
 - Fabian Affolter <fab [AT] fedoraproject <dot> org>
